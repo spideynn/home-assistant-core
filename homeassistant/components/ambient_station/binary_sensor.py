@@ -29,6 +29,7 @@ TYPE_BATT7 = "batt7"
 TYPE_BATT8 = "batt8"
 TYPE_BATT9 = "batt9"
 TYPE_BATT_CO2 = "batt_co2"
+TYPE_BATT_LIGHTNING = "batt_lightning"
 TYPE_BATTOUT = "battout"
 TYPE_PM25_BATT = "batt_25"
 TYPE_PM25IN_BATT = "batt_25in"
@@ -130,6 +131,12 @@ BINARY_SENSOR_DESCRIPTIONS = (
         name="CO2 Battery",
         device_class=DEVICE_CLASS_BATTERY,
         on_state=0,
+    ),
+    AmbientBinarySensorDescription(
+        key=TYPE_BATT_LIGHTNING,
+        name="Lightning Battery",
+        device_class=DEVICE_CLASS_BATTERY,
+        on_state=1,
     ),
     AmbientBinarySensorDescription(
         key=TYPE_PM25IN_BATT,

@@ -63,6 +63,8 @@ TYPE_HUMIDITY8 = "humidity8"
 TYPE_HUMIDITY9 = "humidity9"
 TYPE_HUMIDITYIN = "humidityin"
 TYPE_LASTRAIN = "lastRain"
+TYPE_LIGHTNING_1H = "lightning_hour"
+TYPE_LIGHTNING_24H = "lightning_day"
 TYPE_MAXDAILYGUST = "maxdailygust"
 TYPE_MONTHLYRAININ = "monthlyrainin"
 TYPE_PM25 = "pm25"
@@ -255,6 +257,20 @@ SENSOR_DESCRIPTIONS = (
         name="Last Rain",
         icon="mdi:water",
         device_class=DEVICE_CLASS_TIMESTAMP,
+    ),
+    SensorEntityDescription(
+        key=TYPE_LIGHTNING_1H,
+        name="Hourly Lightning Strikes",
+        icon="mdi:flash",
+        native_unit_of_measurement="strikes",
+        state_class=STATE_CLASS_TOTAL_INCREASING,
+    ),
+    SensorEntityDescription(
+        key=TYPE_LIGHTNING_24H,
+        name="Daily Lightning Strikes",
+        icon="mdi:flash",
+        native_unit_of_measurement="strikes",
+        state_class=STATE_CLASS_TOTAL_INCREASING,
     ),
     SensorEntityDescription(
         key=TYPE_MAXDAILYGUST,
